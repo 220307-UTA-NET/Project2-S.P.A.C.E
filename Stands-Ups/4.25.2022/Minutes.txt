@@ -1,0 +1,13 @@
+GROUP:
+1) Decided on Project/details
+2) Decided on Project name
+3) Decided on Project GitHub CI/CD Pipeline flow
+4) Implemented .gitignore and branches
+5) Set up Project proposal
+6) Decided on 3-Phase implementation
+
+ToDo:
+1) Set up SonarCloud
+2) Have each person set up a repo branch
+3) Finalize Project proposal
+4) Set up template
