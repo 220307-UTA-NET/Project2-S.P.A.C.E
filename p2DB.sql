@@ -57,9 +57,6 @@ VALUES
     ('username1', 'password1', 'email1@gmail.com'),
     ('username2', 'password2', 'email2@gmail.com');
 
--- Drop User Table
--- DROP TABLE p2.User;
-
 -- Populate Comment Table
 INSERT INTO p2.Comment (UserId, Content)
 VALUES
