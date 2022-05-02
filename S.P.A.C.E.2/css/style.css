@@ -1,0 +1,207 @@
+body
+{
+    background-color: black;
+    color: lightgrey;
+}
+
+h1
+{
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2
+{
+    text-align: left;
+    padding-left: 10px;
+}
+
+h3
+{
+    font-size: 23px;
+    margin: 18px;
+}
+
+h4
+{
+    font-size: 20px;
+    padding-left: 35px;
+    margin: 18px;
+}
+
+h5
+{
+    font-size: 17px;
+    padding-left: 60px;
+    margin: 18px;
+}
+
+h6
+{
+    font-size: 14px;
+    padding-left: 80px;
+    margin: 18px;
+}
+
+.sub_head a
+{
+    color: blue; /* HYPERLINK COLOR */
+    text-decoration: none;
+}
+
+.sub_head a:active
+{
+    text-decoration: underline; /* ----- */
+}
+
+#wrapper
+{
+    display: grid;
+    grid-template-columns: 15% 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header header header"
+        "sidenav sidenav main main"
+        "footer footer footer footer";
+}
+
+header
+{
+    grid-area: header;
+    display: flex; 
+}
+
+#logo
+{
+
+}
+
+#logo img
+{
+    height: 150px;
+    width: 200px;
+    padding: 10px;
+}
+
+#name
+{
+    display: flex;
+    align-items: center;
+}
+
+#name h1
+{
+    font-size: 35pt;
+    padding-left: 20px;
+    text-decoration-line: none;    
+}
+
+.dropdown
+{ 
+    /*display: flex;*/
+    /*align-items:flex-end;*/
+    margin-left: auto;
+    position: relative;
+    display: inline-block;
+    margin-top: 60px;
+    margin-right: 10px;
+}
+
+.dropdown img
+{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 90px;;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover 
+{
+    background-color: #f1f1f1
+}
+
+.show 
+{
+    display:block;
+}
+
+#sidenav
+{
+    grid-area: sidenav;
+    height: 100vh; /*100% of vertical height */
+}
+
+#sidenav ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin-left: 15px;
+}
+
+.main_head
+{
+    text-decoration: none;
+    font-size: 22pt;
+    color: inherit; /*Remove hyperlink format */
+}
+
+.sub_head
+{
+    margin-top: 5px;
+    margin-left: 15px;
+    font-size: 18pt;
+    margin-bottom: 10px;
+    
+}
+
+.collapsed
+{
+    display: none;
+}
+
+
+
+
+
+main
+{
+    grid-area: main;
+    background-color: lightgray;
+    color: red;
+}
+
+footer
+{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer img
+{
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+}
