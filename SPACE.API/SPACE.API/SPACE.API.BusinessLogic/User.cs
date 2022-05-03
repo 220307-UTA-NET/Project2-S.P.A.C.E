@@ -1,22 +1,17 @@
-﻿namespace SPACE.API.SPACE.API.BusinessLogic
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SPACE.API.SPACE.API.BusinessLogic
 {
     public class User
     {
         // Fields
-        public int Id { get; set; }
+        [Key]
+        public int UserId { get; set; }
+        [Required]
         public string Username { get; set; }
+        [Required]
         public string Password { get; set; }
+        [Required]
         public string Email { get; set; }
-
-        // Constructors
-        public User() { }
-
-        public User(int Id, string Username, string Password, string Email)
-        {
-            this.Id = Id;
-            this.Username = Username;
-            this.Password = Password;
-            this.Email = Email;
-        }
     }
 }

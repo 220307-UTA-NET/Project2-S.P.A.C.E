@@ -10,26 +10,26 @@ namespace SPACE.API.Controllers
     public class UserController : ControllerBase
     {
         // DataContext private field
-        private readonly DataContext _context;
+        private readonly DataContext _dataContext;
 
         // DataContext Constructor
-        public UserController(DataContext context)
+        public UserController(DataContext dataContext)
         {
-            _context = context;
+            _dataContext = dataContext;
         }
 
         // Methods
         // Using DataContext
         [HttpGet]
-        public async Task<ActionResult<List<User>>> Get()
+        public async Task<ActionResult<List<User>>> GetAllUsers()
         {
-            return await _context.Users.ToListAsync();
+            return await _dataContext.Users.ToListAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<List<User>>> Get(int id)
+        public async Task<ActionResult<List<User>>> GetUser(int id)
         {
-            var user = await _context.Users.FindAsync(id);
+            var user = await _dataContext.Users.FindAsync(id);
             if (user == null)
                 return BadRequest("User not found.");
             return Ok(user);
@@ -38,16 +38,16 @@ namespace SPACE.API.Controllers
         [HttpPost]
         public async Task<ActionResult<List<User>>> AddUser(User user)
         {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            _dataContext.Users.Add(user);
+            await _dataContext.SaveChangesAsync();
 
-            return Ok(await _context.Users.ToListAsync());
+            return Ok(await _dataContext.Users.ToListAsync());
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult<List<User>>> UpdateUser(User user)
         {
-            var dbUser = await _context.Users.FindAsync(user.Id);
+            var dbUser = await _dataContext.Users.FindAsync(user.UserId);
             if (dbUser == null)
                 return BadRequest("User not found.");
 
@@ -55,22 +55,22 @@ namespace SPACE.API.Controllers
             dbUser.Password = user.Password;
             dbUser.Email = user.Email;
 
-            await _context.SaveChangesAsync();
+            await _dataContext.SaveChangesAsync();
 
-            return Ok(await _context.Users.ToListAsync());
+            return Ok(await _dataContext.Users.ToListAsync());
         }
 
-        [HttpDelete]
-        public async Task<ActionResult<List<User>>> Delete(int id)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<List<User>>> DeleteUser(int id)
         {
-            var dbUser = await _context.Users.FindAsync(id);
+            var dbUser = await _dataContext.Users.FindAsync(id);
             if (dbUser == null)
                 return BadRequest("User not found.");
 
-            _context.Users.Remove(dbUser);
-            await _context.SaveChangesAsync();
+            _dataContext.Users.Remove(dbUser);
+            await _dataContext.SaveChangesAsync();
 
-            return Ok(await _context.Users.ToListAsync());
+            return Ok(await _dataContext.Users.ToListAsync());
         }
     }
 }
