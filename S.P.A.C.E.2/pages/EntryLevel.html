@@ -4,7 +4,7 @@
 
 <h1>Entry Level</h1>
 
-<ul>
+<ol>
     <li>Choosing an appropriate IDE (Integrated Development Environment</li>
     <li>Explain what namespace is; explain what a class is and its relation to objects</li>
     <li>Intoducing how to add useful comments</li>
@@ -15,7 +15,7 @@
     <li>Intro to if/else and conditional statements + switch</li>
     <li>Intro to utilizing C# libraries</li>
     <li>Intro to simple arrays and targetting specific indexes</li>
-</ul>
+</ol>
 <h2>Data Types, Variables, Fields, and Concatination</h2>
 
 <h3>Data Types</h3>
@@ -59,8 +59,38 @@ for doubles</p>
 <h4>Strings</h4>
 <p>The string data type is used to store a sequence of characters (text). String values must be surrounded by double quotes("").</p>
 
+<h3>Variables</h3>
+<p>Variables are specific names given to locations in the memory for storing and dealing with data. The values of a variable can be 
+    changed or reused as many times as possible. Every variable name has a specific type that resolves the size and layout of memory 
+    the variable will hold as well as the range of values that variable within your program can hold. Also, programmers can determine 
+    which variables can be applied to which type of operation.</p>
+    <h6>Types of C# Variables</h6>
+    <ul>
+        <li>Integral Types - (sbyte, byte, ushort, int, uint, long, ulong, and char)</li>
+        <li>Floating-point Types - (float and double)</li>
+        <li>Decimal Types - (Decimal)</li>
+        <li>Boolean Types - (True or False values, as assigned)</li>
+        <li>Nullable Types - (Nullable data types)</li>
+    </ul>
 
-<h2>Simple Operators and Expressions</h2>
+<h4>Defining Variables in C#</h4>
+<p>For implementing variables in a C# program, you have to define them before use. To do this, the syntax is: <data_type> <variable_names>; </variable_names></p>
+<h4>Initializing Variables in C#</h4>
+<p>A C #variable gets initialized using the assignment operator, which is the equal sign. We will learn more about different operators in the subsequent chapters. 
+    The syntax for initializing a variable in C# is: <data_type> <variable_names> = value;</p>
+<h4>Accepting Values in a Program</h4>
+<p>There is a particular function of the Console class that provides the function Readline() to take input from the user for storing them in a variable, which is ultimately 
+a named memory location.</p>
+
+<h3>Fields</h3>
+<p>Fields are normal variable members of a class. Generally, you should declare your fields as private, then use 
+    Properties to get and set their values. By this way you won't affect their values them directly. This is common 
+    case practice since having public members violates the Encapsulation concept in OOP.</p>
+<h3>Concatination</h3>
+<p>Concatenation is the process of appending one string to the end of another string. You concatenate strings by using the + operator. For string literals and string constants, 
+   concatenation occurs at compile time; no run-time concatenation occurs. For string variables, concatenation occurs only at run time.</p>
+
+        <h2>Simple Operators and Expressions</h2>
 
 <h3>Simple Operators</h3>
 <p>C# provides a number of operators. Many of them are supported by the built-in types and allow you to perform basic operations with
