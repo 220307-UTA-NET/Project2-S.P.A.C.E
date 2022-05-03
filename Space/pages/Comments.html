@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <h1>How to Add Useful Comments</h1>
+
+    <h2>Why Write Code Comments?</h2>
+    <p>In most programming cases, you aren't the only person working on the same project or program. This means that other people get to read your code and try to understand it.</p>
+    <p>Developers often write "quick" and "dirty" comments without much context, leaving other developers clueless about what you're trying to say. It's bad practice that creates more confusion than understanding things.</p>
+
+    <h3> Code Comment Describes:</h3>
+    <ul style="list-style-type: circle;">
+        <li>the function</li>
+        <li>the reasoning behind the function</li>
+        <li>its input and output</li>
+    </ul>
+
+    <h3>Different Types of Code Comments</h3>
+    <ul style="list-style-type: circle;">
+        <li>Documentation comments-Main purpose to these comments is to quickly clarify the purpose of a file or component. Instead of reading a component's entire code to understand what it does, you can include a code comment at the top of your 'index' file to explain what the component does.</li>
+        <li>Function comments-most useful type of comments and can be automatically generated in many languages. They describe the purpose of the function, which parameter it accepts. and what output it generates.</li>
+        <pre class="line-numbers">
+            <code class="language-css">
+                /**
+                * @desc Creates a welcome message
+                */
+                function sayHello(name) {
+                    return 'Hello ${name}';
+                }
+            </code>
+        </pre>
+        <li>Logic comments-comments within functions to clarify complex code paths. As you could have guessed, it's an evident code smell or tehcnical debt indicating that your code is far too complex. Often provide too much detailed information.</li>
+        <pre class="line-numbers">
+            <code class="language-csharp">
+                let date = new Date(); // store today's date to calculate the elapsed time
+            </code>
+        </pre>
+    </ul>
+
+    <h3>Code Comments: 5 Best Practices</h3>
+    <h5>1. Make use of code annotations or tags</h5>
+    <p>For functions, you should include the following code tags:</p>
+    <ul style="list-style-type: circle;">
+        <li>@desc-Write down a description for you function</li>
+        <li>@param-Describe all input parameters the function accepts. Make sure to define the input types.</li>
+        <li>@returns-Describe the returned output. Make sure to define the output type.</li>
+        <li>@throws-Describe the error type the function can throw.</li>
+        <li>@example-Include one or multiple examples that show the input and expected output.</li>
+    </ul>
+    
+    <h5>2. Keep code comments in the editor</h5>
+    <p>If you want to make your code comments and issues useful and easy to create and find, add them where you're spending most of your time - in the editor.</p>
+
+    <h5>3. Write Down why you are doing something</h5>
+    <p>Context is essential to give developers more insights into the design decisions behind a function or component. This context is crucial when other developers want to make changes against your function or component.</p>
+    <pre class="line-numbers">
+        <code class="language-csharp">
+            /**
+            * Sets the label property of a new form. 
+            *
+            * @param label teext for label of form
+            */
+            function setFormLabel(label) {
+                //logic
+            }
+        </code>
+    </pre>
+    
+    <h5>4. Don't refer to other documents or comments</h5>
+    <p>It's not a good idea to refer to other code comments or internal documents that clarify a function or component. If a developer wants to scan code to get a better understanding quickly, the code comments should be clear. If you think you need to add a document to clarify a code's purpose, it's a red flag for bad code.</p>
+
+    <h5>5. Write comments while writing code</h5>
+    <p>It's best to write comments when you complete a function or module.</p>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <h1>Introducing Console.WriteLine, Console.Write,Console.Readline, and Console.Read</h1>
+
+    <h2>Console.WriteLine Method</h2>
+    <p>Writes the specified data, followed by the current line terminator, to the standard output stream.</p>
+    <p>Console.WriteLine is used to print data along with printing the new line.</p>
+    <pre class="line-numbers">
+        <code class="language-csharp">
+            public status Program{
+                static void Main(string[] args)
+                {
+                    /* output:
+                    Hello
+                    World
+                    */
+                    Console.WriteLine("Hello!");
+                    Console.WriteLine("World!");
+                }
+            }
+        </code>
+    </pre>
+
+    <h2>Console.Write Method</h2>
+    <p>Console.Write is used to print data without printing the new line.</p>
+    <p>Writes the text representation of the specified value or values to the standard output stream.</p>
+    <pre class="line-numbers">
+        <code class="language-csharp">
+            public class Program{
+                static void Main(string[] args)
+                {
+                    /* output:
+                    Hello World!
+                    */
+                    Console.Write("Hello");
+                    Console.Write("World!");
+                }
+            }
+        </code>
+    </pre>
+
+    <h2>Console.ReadLine Method</h2>
+    <p>This method is used to read the next line of characters from the standard input stream.</p>
+    <p>If the standard input device is the keyboard, the ReadLine method blocks until the users presses the Enter key.</p>
+    <p>If the standard input is redirected to a file, then this method reads a line of text from a file.</p>
+    <pre class="line-numbers">
+        <code class="language-csharp">
+            public static void Main()
+            {
+                int age;
+                string name;
+
+                Console.WriteLine("Enter your name: ");
+
+                // using the method.
+                // typecasting not needed
+                // as ReadLine returns string
+                name = Console.ReadLine();
+            }
+        </code>
+    </pre>
+
+    <h2>Console.Read Method</h2>
+    <p>Console.Read is used to read the next character from the standard input stream.</p>
+    <p>This method basically blocks its return when the user types some input characters. As soon as the user press ENTER key it terminates.</p>
+    <pre class="line-numbers">
+        <code class="language-csharp">
+            static void Main(string[] args)
+            {
+                int x;
+                Console.WriteLine("Enter your Character to get Decimal number");
+                
+                // using the method
+                x = Console.Read();
+                Console.WriteLine(x);
+            }
+        </code>
+    </pre>
+</html>
