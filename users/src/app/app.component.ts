@@ -51,7 +51,12 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit2() {
-    this.usersService.updateUser(this.user);
+    this.usersService.updateUser(this.user)
+    .subscribe(
+      response => {
+        this.getAllUsers();
+      }
+    );
   }
 
   deleteUser(userid: number) {
@@ -66,16 +71,4 @@ export class AppComponent implements OnInit {
   populateForm(user: User) {
     this.user = user;
   }
-
-  updateUser(user: User) {
-    this.usersService.updateUser(user)
-    .subscribe(
-      response => {
-        this.getAllUsers();
-      }
-    );
-  }
-
-
-
 }
