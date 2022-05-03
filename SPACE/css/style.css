@@ -43,21 +43,10 @@ h6
     margin: 18px;
 }
 
-.sub_head a
-{
-    color: blue; /* HYPERLINK COLOR */
-    text-decoration: none;
-}
-
-.sub_head a:active
-{
-    text-decoration: underline; /* ----- */
-}
-
 #wrapper
 {
     display: grid;
-    grid-template-columns: 15% 50px 50px;
+    grid-template-columns: 20% 50px 50px;
     grid-template-rows: auto;
     grid-template-areas: 
         "header header header header"
@@ -73,14 +62,16 @@ header
 
 #logo
 {
+    margin-left: 30px;
 
 }
 
 #logo img
 {
-    height: 150px;
-    width: 200px;
+    height: 250px;
+    width: 350px;
     padding: 10px;
+    
 }
 
 #name
@@ -103,7 +94,7 @@ header
     margin-left: auto;
     position: relative;
     display: inline-block;
-    margin-top: 60px;
+    margin-top: 130px;
     margin-right: 10px;
 }
 
@@ -149,7 +140,7 @@ header
 #sidenav
 {
     grid-area: sidenav;
-    height: 100vh; /*100% of vertical height */
+    /*height: 100vh;*/ /*100% of vertical height */
 }
 
 #sidenav ul
@@ -169,10 +160,43 @@ header
 .sub_head
 {
     margin-top: 5px;
-    margin-left: 15px;
     font-size: 18pt;
+    margin-bottom: 10px;   
+}
+
+.sub_head a
+{
+    color: inherit; /* HYPERLINK COLOR */
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.sub_head a:active
+{
+    text-decoration: underline; /* ----- */
+}
+
+.level_d
+{
+    margin-left: 20px;
+}
+
+.nested_head
+{
+    margin-top: 5px;
+}
+
+.nested_head li
+{
     margin-bottom: 10px;
+    list-style-type: circle;
+    margin-left: 45px;
     
+}
+
+.level
+{
+  margin-left: 50px;
 }
 
 .collapsed
@@ -188,7 +212,8 @@ main
 {
     grid-area: main;
     background-color: lightgray;
-    color: red;
+    color: black;
+    padding: 20px;
 }
 
 footer

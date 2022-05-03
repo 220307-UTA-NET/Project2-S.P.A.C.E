@@ -3,7 +3,7 @@ $(document).ready(function()
     $('#content_insert').load('/pages/CSOverview.html');
     
     
-    
+  /* The Link collapse 
     
  $('.sub_head').show();
     $('.main_head').click(function() {
@@ -11,7 +11,7 @@ $(document).ready(function()
         $(this).find('ul').slideToggle();
     });   
     
-    
+  */ 
 
 document.getElementById("avatar").onclick = function() {myFunction()};
 
@@ -37,14 +37,28 @@ window.onclick = function(event) {
 }
 });
 
+function Introduction()
+{
+    $('#content_insert').load('/pages/SpaceOverview.html');
+}
+
 function DisplayCSOverview()
 {
-    $('#content_insert').load('/pages/CSOverview.html');
+    $('#content_insert').load('/pages/csoverview.html');
 }
 
-function DisplayDTP()
+function DisplayPillars()
 {
-    $('#content_insert').load('/pages/DTP.html');
+    $('#content_insert').load('/pages/Fundamentals');
 }
 
+function DisplayIDE()
+{
+    $('#content_insert').load('/pages/IDE.html');
+}
+
+function DisplayClass()
+{
+    $('#content_insert').load('/pages/Class.html');
+}
 
