@@ -46,5 +46,11 @@ function DisplayDTP()
 {
     $('#content_insert').load('/pages/DTP.html');
 }
-
-
+function DisplayFundamentals()
+{
+    $('#content_insert').load('/pages/Fundamental.html');
+}
+function DisplayEntryLevel()
+{
+    $('#content_insert').load('/pages/EntryLevel.html');
+}
