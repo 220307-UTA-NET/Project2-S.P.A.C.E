@@ -1,0 +1,100 @@
+/* Global Styles */
+body 
+{
+  background-color: black;
+  color: lightgrey;
+}
+
+h1
+{
+  font-size: 40pt;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h2
+{
+  text-align: left;
+  padding-left: 10px;
+}
+
+h3
+{
+  font-size: 23px;
+  margin: 18px;
+}
+
+h4
+{
+  font-size: 20px;
+  padding-left: 35px;
+  margin: 18px;
+}
+
+h5
+{
+  font-size: 17px;
+  padding-left: 60px;
+  margin: 18px;
+}
+
+h6
+{
+  font-size: 14px;
+  padding-left: 80px;
+  margin: 18px;
+}
+
+.container 
+{
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "nav content content"
+    "footer footer footer";
+  height: 100vh;
+}
+
+app-header 
+{
+  grid-area: header;
+  background-color: black;
+}
+  
+app-nav 
+{
+  grid-area: nav;
+  margin-left: 0.6rem;
+  border-style: dashed;
+}
+  
+app-privacy-policy, app-main 
+{
+  grid-area: content;
+  background-color: #F4CE46;
+  padding: 25px;
+}
+  
+app-aside 
+{
+  grid-area: side;
+  margin-right: 0.6rem;
+  background-color: #2A92BF;
+}
+  
+app-footer 
+{
+  background-color: black;
+  grid-area: footer;
+  text-align: center;
+  padding: 25px 0;
+}
+
+ul li a 
+{
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 15px;
+}
