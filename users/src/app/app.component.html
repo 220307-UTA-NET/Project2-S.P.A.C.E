@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>TESTING ANGULAR + ASP.NET CRUD</h1>
+
+  <!--Left-side-->
+  <div class="users-container">
+    <div class="users-form">
+      <form #form="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <h3>Post here</h3>
+          <label for="">Username</label>
+          <input type="text" name="username" [(ngModel)]='user.username'>
+          <label for="">Password</label>
+          <input type="text" name="password" [(ngModel)]='user.password'>
+          <label for="">Email</label>
+          <input type="text" name="email" [(ngModel)]='user.email'>
+          <button>Save</button>
+        </div>
+      </form>
+
+      <form #form="ngForm" (ngSubmit)="onSubmit2()">
+        <div class="form-group">
+          <h3>Update here</h3>
+          <label for="">Username</label>
+          <input type="text" name="username" [(ngModel)]='user.username'>
+          <label for="">Password</label>
+          <input type="text" name="password" [(ngModel)]='user.password'>
+          <label for="">Email</label>
+          <input type="text" name="email" [(ngModel)]='user.email'>
+          <button>Update</button>
+        </div>
+      </form>
+    </div>
+
+    <!--Right-side-->
+    <div class="account-info">
+      <div class="user-row" *ngFor="let user of users">
+        <div (click)="populateForm(user)" class="user-detail">
+          <p>User Id: {{ user.userId }}</p>
+          <p>Username: {{ user.username }}</p>
+          <p>Password: {{ user.password }}</p>
+          <p>Email: {{ user.email }}</p>
+        </div> 
+        <div class="user-detail-action">
+          <a (click)="deleteUser(user.userId)"><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
