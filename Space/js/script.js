@@ -23,6 +23,11 @@ function DisplayConsole()
     $('#content_insert').load('/pages/Console.html')
 }
 
+function DisplayLibraries()
+{
+    $('#content_insert').load('/pages/Libraries.html')
+}
+
 function DisplayDTP()
 {
     $('#content_insert').load('/pages/DTP.html');

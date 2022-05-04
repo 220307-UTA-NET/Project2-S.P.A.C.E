@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <h1>Introduction to Utilizing C# Libraries</h1>
+
+    <h2>What is a Library?</h2>
+    <p>A library is a program that contains classes and/or other resources that other programs can use.
+        A library is not an executable, it does not need the Main() function. A library usually has the extension
+        .dll (other types of libraries in Microsoft Windows can have the extension .lib or antoher extension). It is 
+        simply a collection of functions which can be added to your application and the functions called as necessary, just like
+        any other functions in the application.
+    </p>
+
+    <h2>Different Types of Libraries</h2>
+    <ul style="list-style-type: circle;">
+        <li>Static Library (lib)-Compiled to object code by the compiler and the objects merged into a library by the linker/librarian tool.</li>
+        <li>Dynamic Linked Library (DLL)-The linking operation is basically the same as the normal linking of executables, the difference is that the final executable is created when loading the application, not when building it.</li>
+        <li>DLL or other library file operned by the application and the functions called through function pointers. Typical use case is the plugin system for many applications.</li>
+    </ul>
+
+    <h2>Creating A Library</h2>
+    <p>A library can be made of a single file or as many files as necessary. A file that is part of a library
+        can contain one or more classes. Each class should implement a behavior that can be useful and accessible
+        to other classes. The classes in a library are created exactly like those of other programs.
+    </p>
+</html>
