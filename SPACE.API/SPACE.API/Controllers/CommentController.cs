@@ -27,10 +27,10 @@ namespace SPACE.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<List<Comment>>> GetComment(int id)
         {
-            var user = await _dataContext.Comments.FindAsync(id);
-            if (user == null)
-                return BadRequest("Comment not found.");
-            return Ok(user);
+            var comment = await _dataContext.Comments.Where(comment => comment.UserId == id).ToListAsync();
+            if (comment == null)
+                return BadRequest("Not comments found.");
+            return Ok(comment);
         }
 
         [HttpPost]

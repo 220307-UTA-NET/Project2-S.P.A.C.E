@@ -1,0 +1,55 @@
+<div class="container">
+    <h1>This is the comment component!</h1>
+
+    <!-- 1st -->
+    <form>
+        <div class="show-comment">
+            <div class="comment-detail" *ngFor="let comment of comments">
+                <div class="comment-ids">
+                    <span>Comment Id: {{ comment.commentId }}</span>
+                    <span>User Id: {{ comment.userId }}</span>
+                </div>
+                <div class="content">
+                    <textarea id="content" name="content" rows="6" cols="60" height="auto">{{ comment.content }}</textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="comment-container">
+        <form #form="ngForm" (ngSubmit)="onSubmit()">
+            <div class="comment-group">
+                <h3>Comment:</h3>
+                <textarea id="content" name="content" rows="6" cols="60" height="auto" placeholder="Enter your comment here." [(ngModel)]="comment.content"></textarea>
+                <br>
+                <button>Post</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- 2nd -->
+    <!-- <div class="comment-info">
+        <form> 
+            <div class="comment-row">
+                <h3>Get comments</h3>
+                <label for="">Enter userId</label>
+                <input type="text" name="userId" [(ngModel)]='user.userId'>
+                <div class="comment-detail" *ngFor="let comment of comments">
+                    <p>Comment Id: {{ comment.commentId }}</p>
+                    <p>Content: {{ comment.content }}</p>
+                    <p>User Id: {{ comment.userId }}</p>
+                    <div class="delete-action">
+                        <a (click)="deleteComment(comment.commentId)"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                </div>
+                <br>
+                <button>Get</button>
+
+            </div>
+        </form>
+    </div> -->
+
+
+
+
+</div>

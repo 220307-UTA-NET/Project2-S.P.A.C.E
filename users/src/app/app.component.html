@@ -48,3 +48,28 @@
     </div>
   </div>
 </div>
+
+<div class="login">
+  <form>
+    <div class="form-group">
+      <h3>Update here</h3>
+      <label for="">Username</label>
+      <input type="text" name="username" [(ngModel)]='user.username'>
+      <label for="">Password</label>
+      <input type="text" name="password" [(ngModel)]='user.password'>
+      <label for="">Email</label>
+      <input type="text" name="email" [(ngModel)]='user.email'>
+      <button>Update</button>
+    </div>
+  </form>
+</div>
+
+<!--<h6><a href="#" onclick="DisplayIDE();">Choosing an appropriate IDE</a></h6>-->
+<!--function DisplayCSOverview()
+{
+    $('#content_insert').load('/pages/csoverview.html');
+}
+-->
+<div class="comment-container">
+  <app-comment></app-comment>
+<div>
