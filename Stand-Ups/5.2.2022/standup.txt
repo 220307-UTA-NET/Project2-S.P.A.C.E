@@ -1,0 +1,24 @@
+Austin:
+	Yesterday: Angular v1 with hooks added 
+	Today: Angular v2 with all content added
+	Blocker: Angular syntax
+
+Jay:
+	Yesterday: Worked on Back-end Account API and Account Page Front
+	Today: Working on Back-end Account API and Account Page Front
+	Blocker: Integration syntax and troubleshooting connections
+
+Andrew:
+	Yesterday: Worked on Back-end Account API and Account Page Front
+	Today: Working on Back-end Account API and Account Page Front
+	Blocker: Integration syntax and troubleshooting connections
+
+Aur:
+	Yesterday: Wrote entry level pages (starting at top)
+	Today: Finish entry level section	
+	Blocker: Time
+
+Tuan:
+	Yesterday: Wrote entry level pages (starting at bottom)
+	Today: Finish entry level section
+	Blocker: Time
