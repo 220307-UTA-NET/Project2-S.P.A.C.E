@@ -1,0 +1,24 @@
+Austin:
+	Yesterday:
+	Today:
+	Blocker:
+
+Jay:
+	Yesterday: Worked on connections between Account page and main page
+	Today: Same as yesterday
+	Blocker: Time
+
+Aur:
+	Yesterday: worked on entry level material (top)
+	Today: Add code sandbox (and tests)
+	Blocker: No coffee
+
+Andrew:
+	Yesterday: CRUD operations on USER Table/ COMMENTS table
+	Today: Continue CRUD operations and connecting together
+	Blocker: Angular
+
+Tuan:
+	Yesterday: Worked on entry level material (bottom)
+	Today: Help Aur, on code challenges and fix headers
+	Blocker: Tiredness

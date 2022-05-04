@@ -4,6 +4,7 @@ nav
     border-right: solid;
     border-bottom: solid;
     padding-left: 10px;
+    /*height: 100%;*/
 }
 
 nav ul
