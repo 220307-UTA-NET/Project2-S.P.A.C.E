@@ -8,53 +8,48 @@ body
 h1
 {
   font-size: 40pt;
-  text-align: center;
-  text-decoration: underline;
 }
 
 h2
 {
-  text-align: left;
-  padding-left: 10px;
+  font-size: 20pt;
 }
 
 h3
 {
-  font-size: 23px;
-  margin: 18px;
+  margin-left: -10px;
+  font-size: 18pt;
 }
 
 h4
 {
-  font-size: 20px;
-  padding-left: 35px;
-  margin: 18px;
+  margin-bottom: 0;
+  margin-top: 0;
+  /*margin-top: -10px;*/
+  margin-left: -10px;
+  font-size: 16pt;
 }
 
-h5
+ul li
 {
-  font-size: 17px;
-  padding-left: 60px;
-  margin: 18px;
+  font-size: 15pt;
 }
 
-h6
+ul li a
 {
-  font-size: 14px;
-  padding-left: 80px;
-  margin: 18px;
+  text-decoration: none;
 }
 
 .container 
 {
   display: grid;
-  grid-template-columns: 200px 1fr 200px;
+  grid-template-columns: 435px 1fr 200px; /* Change size of areas */
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header header header"
     "nav content content"
     "footer footer footer";
-  height: 100vh;
+  height: 100vh; /* Might take out */
 }
 
 app-header 
@@ -66,35 +61,20 @@ app-header
 app-nav 
 {
   grid-area: nav;
-  margin-left: 0.6rem;
-  border-style: dashed;
+  /*border-style: dashed;*/
 }
   
-app-privacy-policy, app-main 
+app-main 
 {
   grid-area: content;
-  background-color: #F4CE46;
+  background-color: #74726a;
   padding: 25px;
 }
-  
-app-aside 
-{
-  grid-area: side;
-  margin-right: 0.6rem;
-  background-color: #2A92BF;
-}
-  
+
 app-footer 
 {
   background-color: black;
   grid-area: footer;
   text-align: center;
   padding: 25px 0;
-}
-
-ul li a 
-{
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 15px;
 }
