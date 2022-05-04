@@ -29,7 +29,7 @@ export class CommentComponent implements OnInit {
 
   ngOnInit(): void {
     // Get the user
-    
+    // ??
     // Print all comments
     this.getAllComments();
   }
@@ -52,11 +52,6 @@ export class CommentComponent implements OnInit {
     .subscribe(
       response => {
         this.getAllCommentsFor(userId);
-        this.comment = {
-          commentId: 0,
-          content: '',
-          userId: 0
-        };
       }
     );
   }
@@ -79,21 +74,17 @@ export class CommentComponent implements OnInit {
       this.commentService.deleteComment(commentId)
       .subscribe(
         response => {
-          console.log(response);
+          this.getAllComments();
         }
       );
     }
 
-  // onSubmit() {
-  //   UsersService
-  //   this.commentService.getAllCommentsFor(this.user.userId)
-  //   .subscribe(
-  //     response => {
-  //       this.getAllCommentsFor(this.user.userId);
-  //     }
-  //   );
-  // }
-
-
-
+    updateComment(comment: Comment) {
+      this.commentService.updateComment(this.comment)
+      .subscribe(
+        response => {
+          this.getAllComments();
+        }
+      );
+    }
 }

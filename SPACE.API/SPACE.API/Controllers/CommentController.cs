@@ -42,7 +42,7 @@ namespace SPACE.API.Controllers
             return Ok(await _dataContext.Comments.ToListAsync());
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult<List<Comment>>> UpdateComment(Comment comment)
         {
             var dbComment = await _dataContext.Comments.FindAsync(comment.CommentId);
@@ -56,7 +56,7 @@ namespace SPACE.API.Controllers
             return Ok(await _dataContext.Comments.ToListAsync());
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult<List<Comment>>> DeleteComment(int id)
         {
             var dbComment = await _dataContext.Comments.FindAsync(id);

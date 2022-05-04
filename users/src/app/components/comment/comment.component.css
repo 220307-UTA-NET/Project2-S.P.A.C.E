@@ -24,6 +24,10 @@
     justify-content: space-evenly;
 }
 
+.comment-group {
+    display: flex;
+}
+
 form textarea {
     resize: none;
     font-size: 1.2em;

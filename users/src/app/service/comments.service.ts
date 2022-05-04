@@ -32,4 +32,9 @@ export class CommentsService {
     return this.http.delete<Comment>(this.baseUrl + '/' + commentId);
   }
 
+  // Update comment
+  updateComment(comment: Comment): Observable<Comment> {
+    return this.http.put<Comment>(this.baseUrl + '/' + comment.commentId, comment);
+  }
+
 }

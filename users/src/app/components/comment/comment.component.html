@@ -2,7 +2,7 @@
     <h1>This is the comment component!</h1>
 
     <!-- 1st -->
-    <form>
+    <form #form="ngForm">
         <div class="show-comment">
             <div class="comment-detail" *ngFor="let comment of comments">
                 <div class="comment-ids">
@@ -11,6 +11,9 @@
                 </div>
                 <div class="content">
                     <textarea id="content" name="content" rows="6" cols="60" height="auto">{{ comment.content }}</textarea>
+                </div>
+                <div class="delete-action">
+                    <a (click)="deleteComment(comment.commentId)"><button>Delete</button></a>
                 </div>
             </div>
         </div>
@@ -27,29 +30,19 @@
         </form>
     </div>
 
-    <!-- 2nd -->
-    <!-- <div class="comment-info">
-        <form> 
-            <div class="comment-row">
-                <h3>Get comments</h3>
-                <label for="">Enter userId</label>
-                <input type="text" name="userId" [(ngModel)]='user.userId'>
-                <div class="comment-detail" *ngFor="let comment of comments">
-                    <p>Comment Id: {{ comment.commentId }}</p>
-                    <p>Content: {{ comment.content }}</p>
-                    <p>User Id: {{ comment.userId }}</p>
-                    <div class="delete-action">
-                        <a (click)="deleteComment(comment.commentId)"><i class="fa-solid fa-trash-can"></i></a>
-                    </div>
-                </div>
-                <br>
-                <button>Get</button>
 
+    <div class="update-container">
+        <form>
+            <div class="update-group">
+                <h3>Update here</h3>
+                <label for="">comment id</label>
+                <input type="text" name="commentid" [(ngModel)]="comment.commentId">
+                <h3>Comment:</h3>
+                <textarea id="content" name="content" rows="6" cols="60" height="auto" placeholder="Enter your comment here." [(ngModel)]="comment.content"></textarea>
+                <br>
+                <a (click)="updateComment(comment)"><button>Update</button></a>
             </div>
         </form>
-    </div> -->
-
-
-
+    </div>
 
 </div>
