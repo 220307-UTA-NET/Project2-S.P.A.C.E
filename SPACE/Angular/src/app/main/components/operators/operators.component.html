@@ -1,0 +1,170 @@
+<h1>Introducing Simple Operators</h1>
+
+<h3>Simple Operators</h3>
+<p>C# provides a number of operators. Many of them are supported by the built-in types and allow you to perform basic operations with
+     values of those types.</p>
+
+     <p>C# operators by group</p>
+     <ul>
+         <li>Arithmetic Operators</li>
+         <li>Comparison Operators</li>
+         <li>Boolean Logical Operators</li>
+         <li>Bitwise and Shift Operators</li>
+         <li>Equality Operators</li>
+     </ul>
+     <h4>Arithmetic Operators</h4>
+     <p>Arithmetic Operations can be split up between Unary and Binary numeric types</p>
+     <h6>Unary</h6>
+     <ul>
+         <li>++ (increment)</li>
+         <li>-- (decrement)</li>
+         <li>+ (plus)</li>
+         <li>- (minus)</li>
+     </ul>
+     <h6>Binary</h6>
+     <ul>
+         <li>* (multiplication)</li>
+         <li>/ (division)</li>
+         <li>% (remainder)</li>
+         <li>+ (addition)</li>
+         <li>- (subtraction)</li>
+     </ul>
+
+     <h4>Comparison Operators</h4>
+     <p>The < (less than), > (greater than), <= (less than or equal), and >= (greater than or equal) comparison, also known as relational, 
+        operators compare their operands. Those operators are supported by all integral and floating-point numeric types.</p>
+        
+        <h6>List of Comparison Operators</h6>
+        <ul>
+            <li> < - returns true if its left-hand operand is less than its right-hand operand, false otherwise</li>
+            <li> > - retruns true if its left-hand operand is greater than its right-hand operan, false otherwise</li>
+            <li> <= - returns ture if its left-hand operand is less than or equal to its right-hand operand, false otherwise</li>
+            <li> >= - returns true if its left-hand operand is greater than or equal to its right-hand operand, false otherwise</li>
+        </ul>
+
+    <h5>Important Operator Overloadability note</h5>
+        <p>
+            A user-defined type can overload the <, >, <=, and >= operators.
+            
+            If a type overloads one of the < or > operators, it must overload both < and >. If a type overloads one of the <= or >= operators, 
+            it must overload both <= and >=.</p>
+
+     <h4>Boolean Logical Operators</h4>
+     <h6> Unary B.L.O. </h6>
+     <ul>
+         <li>! (logical negation) operators</li>
+     </ul>
+
+     <h6> Binary B.L.O</h6>
+     <ul>
+         <li>& (logical AND)</li>
+         <li>| (logical OR)</li>
+         <li> ^ (logical exclusive OR)</li>
+         <li> && (conditional logical AND)</li>
+         <li>|| (conditional logical OR)</li>
+     </ul>
+
+     <h4>Bitwise and Shift Operators</h4>
+     <h6>Unary B.S.O</h6>
+     <ul>
+         <li>~ (bitwise complement) operator</li>
+     </ul>
+     <h6>Binary B.S.O</h6>
+     <ul>
+         <li> << (left shift)</li>
+         <li> >> (right shift)</li>
+         <li> & (logical AND)</li>
+         <li> | (logical OR)</li>
+         <li> ^ (logical exclusive OR)</li>
+     </ul>
+     <h4>Equality Operators</h4>
+     <p>The == (equality) and != (inequality) operators check if their operands are equal or not.</p>
+
+
+     <h2>Strings</h2>
+     
+     <h3>Concatination</h3>
+<p>Concatenation is the process of appending one string to the end of another string. You concatenate strings by using the + operator. For string literals and string constants, 
+   concatenation occurs at compile time; no run-time concatenation occurs. For string variables, concatenation occurs only at run time.</p>
+
+<p>Here are the 6 ways to concatenate strings in C#. </p>
+<h6>6 ways List</h6>
+<ul>
+    <li>Using + operator</li>
+    <li>String Interpolation</li>
+    <li>String.Concatenate() method</li>
+    <li>String.Join() method</li>
+    <li>String.Format() method</li>
+    <li>StringBuilder.Append() method</li>
+</ul>
+
+<h4>Using + Operator</h4>
+<p>The simplest method of adding two strings in C# is using + or += operators. </p>
+
+<h4>String Interpolation</h4>
+<p>String interpolation is a method to concatenate variables as a part of a string. Syntax of string interpolation starts with 
+    a '$' symbol and code variables are within a bracket. </p>
+
+    <h4>String.Concatenate() method</h4>
+    <p>String.Concate() method concatenates two strings, two objects, and two arrays of strings and combinations of them.</p>
+    
+    <h4>String.Join() method</h4>
+    <p>String.Join() method concatenates the elements of an array or the members of a collection, using the specified separator between each 
+        element or member. The array or the collection can be any data type including numbers and objects. String.Join method also allows you 
+        to concatenate string items of any data types with a range. </p>
+
+        <h4>String.Format() method</h4>
+<p>String.Format() method formats strings in a desired format by inserting objects and variables with specified space and alignments into 
+    another strings and literals. It is also often used to format strings into specific formats. 
+    String.Format() method has 8 overloaded formats to provide options to format various objects and variables that allow various variables to 
+    format strings. 
+    
+Note: In C# 6 or later versions, String Interpolation is recommended. Sting interpolation is more flexible and more readable and can achieve the same results without composite formatting. </p>
+
+<h4>StringBuilder.Append() method</h4>
+<p>String object in .NET is immutable. What does that mean? It means every time you use one of the String class methods, no matter if you use
+     the same variable or a new variable, a new string object is created in memory. That means, a memory space is allocated for that new string
+      in your computer memory. The more string methods you use to manipulate strings, the more memory space will be allocated in memory. That 
+      means in a string manipulation heavy code, if strings are not used wisely, it could lead to some serious app performance issues. 
+
+      .NET provides the System.Text.StringBuilder class that can be used to modify strings without creating new string objects. StringBuilder is highly
+ recommended if you have more than a few hundred string concatenation operations in your code. StringBuilder is not recommended for a few string 
+ concatenation operations. 
+    
+ StringBuilder class is defined in the System.Text namespace. You must either import this namespace in your class or reference is direct in the 
+    object instantiation.</p>
+
+
+     <h2>Arrays and Targetting Indexes</h2>
+
+<h3>Arrays</h3>
+<p>An array stores lists of values in a specific order.</p>
+<p>Example: local myArray = "item1", "item2", 12, Random.Part, myVariable</p>
+<p>In the provided example, all values are inside brackets and separated by commas.</p>
+
+<h3>Indexes</h3>
+<p>Indexers are a syntactic convenience that enable you to create a class, struct, or interface that client 
+    applications can access as an array. The compiler will generate an Item property (or an alternatively named property if 
+    IndexerNameAttribute is present), and the appropriate accessor methods.
+     Indexers are most frequently implemented in types whose primary purpose is to encapsulate an internal collection or array. </p>
+
+<p>An Indexer can hold multiple values.</p>
+
+<p>For example, suppose you have a class TempRecord that represents the temperature in Fahrenheit as 
+    recorded at 10 different times during a 24-hour period. The class contains a temps array of type float[] 
+    to store the temperature values. By implementing an indexer in this class, clients can access the temperatures 
+    in a TempRecord instance as float temp = tempRecord[4] instead of as float temp = tempRecord.temps[4]. 
+    The indexer notation not only simplifies the syntax for client applications; it also makes the class, and its 
+    purpose more intuitive for other developers to understand.
+
+    To declare an indexer on a class or struct, use the "this" keyword</p>
+
+    <p>List of Indexer qualities.</p>
+<ul>
+    <li>Allows elements of an internal collection of an object to be accessed by using array notation on the object itself.</li>
+<li>Accessed through an index.</li>
+<li>Must be an instance member.</li>
+<li>A get accessor of an indexer has the same formal paremeter list as the indexer.</li>
+<li>A set accessor of an indexer has the same formal parameter list as the indexer, and also to the value parameter.</li>
+<li>Supports expression bodied members for get only indexers.</li>
+</ul>

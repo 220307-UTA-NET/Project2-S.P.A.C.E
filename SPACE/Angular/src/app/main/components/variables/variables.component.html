@@ -1,0 +1,36 @@
+<h1>Variables, Fields, and Properties</h1>
+
+<h3>Variables</h3>
+<p>Variables are specific names given to locations in the memory for storing and dealing with data. The values of a variable can be 
+    changed or reused as many times as possible. Every variable name has a specific type that resolves the size and layout of memory 
+    the variable will hold as well as the range of values that variable within your program can hold. Also, programmers can determine 
+    which variables can be applied to which type of operation.</p>
+    <h5>Types of C# Variables</h5>
+    <ul>
+        <li>Integral Types - (sbyte, byte, ushort, int, uint, long, ulong, and char)</li>
+        <li>Floating-point Types - (float and double)</li>
+        <li>Decimal Types - (Decimal)</li>
+        <li>Boolean Types - (True or False values, as assigned)</li>
+        <li>Nullable Types - (Nullable data types)</li>
+    </ul>    
+
+    <h4>Defining Variables in C#</h4>
+<p>For implementing variables in a C# program, you have to define them before use. To do this, the syntax is: data_type, variable_names.</p>
+<h4>Initializing Variables in C#</h4>
+<p>A C #variable gets initialized using the assignment operator, which is the equal sign. We will learn more about different operators in the subsequent chapters. 
+    The syntax for initializing a variable in C# is: (data_type) (variable_names) = value;</p>
+<h4>Accepting Values in a Program</h4>
+<p>There is a particular function of the Console class that provides the function Readline() to take input from the user for storing them in a variable, which is ultimately 
+a named memory location.</p>
+
+<h3>Fields</h3>
+<p>Fields are normal variable members of a class. Generally, you should declare your fields as private, then use 
+    Properties to get and set their values. By this way you won't affect their values them directly. This is common 
+    case practice since having public members violates the Encapsulation concept in OOP.</p>
+
+<h3>Properties</h3>
+<p>Properties are named members of classes, structures, and interfaces. Member variables or methods in a class or structures are called Fields. Properties are an extension of fields and are accessed using the same syntax. They use accessors through which the values of the private fields can be read, written or manipulated.</p>
+
+<p>Properties do not name the storage locations. Instead, they have accessors that read, write, or compute their values.</p>
+
+<p>The accessor of a property contains the executable statements that helps in getting (reading or computing) or setting (writing) the property. The accessor declarations can contain a get accessor, a set accessor, or both.</p>
