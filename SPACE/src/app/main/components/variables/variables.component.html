@@ -1,1 +1,79 @@
-<p>variables works!</p>
+<h1>Variables, Fields, and Properties</h1>
+
+<h3>Variables</h3>
+<p>Variables are specific names given to locations in the memory for storing and dealing with data. The values of a variable can be 
+    changed or reused as many times as possible. Every variable name has a specific type that resolves the size and layout of memory 
+    the variable will hold as well as the range of values that variable within your program can hold. Also, programmers can determine 
+    which variables can be applied to which type of operation.</p>
+    <h5>Types of C# Variables</h5>
+    <ul>
+        <li>Integral Types - (sbyte, byte, ushort, int, uint, long, ulong, and char)</li>
+        <li>Floating-point Types - (float and double)</li>
+        <li>Decimal Types - (Decimal)</li>
+        <li>Boolean Types - (True or False values, as assigned)</li>
+        <li>Nullable Types - (Nullable data types)</li>
+    </ul>    
+
+    <h4>Defining Variables in C#</h4>
+<p>For implementing variables in a C# program, you have to define them before use. To do this, the syntax is: data_type, variable_names.</p>
+<h4>Initializing Variables in C#</h4>
+<p>A C #variable gets initialized using the assignment operator, which is the equal sign. We will learn more about different operators in the subsequent chapters. 
+    The syntax for initializing a variable in C# is: (data_type) (variable_names) = value;</p>
+<h4>Accepting Values in a Program</h4>
+<p>There is a particular function of the Console class that provides the function Readline() to take input from the user for storing them in a variable, which is ultimately 
+a named memory location.</p>
+
+<h3>Fields</h3>
+<p>Fields are normal variable members of a class. Generally, you should declare your fields as private, then use 
+    Properties to get and set their values. By this way you won't affect their values them directly. This is common 
+    case practice since having public members violates the Encapsulation concept in OOP.</p>
+<h3>Concatination</h3>
+<p>Concatenation is the process of appending one string to the end of another string. You concatenate strings by using the + operator. For string literals and string constants, 
+   concatenation occurs at compile time; no run-time concatenation occurs. For string variables, concatenation occurs only at run time.</p>
+
+<p>Here are the 6 ways to concatenate strings in C#. </p>
+<h6>6 ways List</h6>
+<ul>
+    <li>Using + operator</li>
+    <li>String Interpolation</li>
+    <li>String.Concatenate() method</li>
+    <li>String.Join() method</li>
+    <li>String.Format() method</li>
+    <li>StringBuilder.Append() method</li>
+</ul>
+
+<h4>Using + Operator</h4>
+<p>The simplest method of adding two strings in C# is using + or += operators. </p>
+
+<h4>String Interpolation</h4>
+<p>String interpolation is a method to concatenate variables as a part of a string. Syntax of string interpolation starts with 
+    a '$' symbol and code variables are within a bracket. </p>
+
+    <h4>String.Concatenate() method</h4>
+    <p>String.Concate() method concatenates two strings, two objects, and two arrays of strings and combinations of them.</p>
+    
+    <h4>String.Join() method</h4>
+    <p>String.Join() method concatenates the elements of an array or the members of a collection, using the specified separator between each 
+        element or member. The array or the collection can be any data type including numbers and objects. String.Join method also allows you 
+        to concatenate string items of any data types with a range. </p>
+
+        <h4>String.Format() method</h4>
+<p>String.Format() method formats strings in a desired format by inserting objects and variables with specified space and alignments into 
+    another strings and literals. It is also often used to format strings into specific formats. 
+    String.Format() method has 8 overloaded formats to provide options to format various objects and variables that allow various variables to 
+    format strings. 
+    
+Note: In C# 6 or later versions, String Interpolation is recommended. Sting interpolation is more flexible and more readable and can achieve the same results without composite formatting. </p>
+
+<h4>StringBuilder.Append() method</h4>
+<p>String object in .NET is immutable. What does that mean? It means every time you use one of the String class methods, no matter if you use
+     the same variable or a new variable, a new string object is created in memory. That means, a memory space is allocated for that new string
+      in your computer memory. The more string methods you use to manipulate strings, the more memory space will be allocated in memory. That 
+      means in a string manipulation heavy code, if strings are not used wisely, it could lead to some serious app performance issues. 
+
+      .NET provides the System.Text.StringBuilder class that can be used to modify strings without creating new string objects. StringBuilder is highly
+ recommended if you have more than a few hundred string concatenation operations in your code. StringBuilder is not recommended for a few string 
+ concatenation operations. 
+    
+ StringBuilder class is defined in the System.Text namespace. You must either import this namespace in your class or reference is direct in the 
+    object instantiation.</p>
