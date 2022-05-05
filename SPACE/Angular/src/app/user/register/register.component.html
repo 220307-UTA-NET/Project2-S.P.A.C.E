@@ -1,0 +1,20 @@
+<p>User Registration</p>
+<form [formGroup]="registrationForm" (ngSubmit)="Submission()">
+  <label for="userName">Username: </label>
+  <input id="userName" type="text" formControlName="userName">
+  <span *ngIf="!userName.valid && userName.touched">Username must include at least 5 characters</span>
+  <br>
+  <label for="password">Password: </label>
+  <input id="password" type="password" formControlName="password">
+  <span *ngIf="!password.valid && password.touched">
+    <span *ngIf="password.errors">
+      Password must be at least 5 characters
+    </span>
+  </span>
+  <br>
+  <label for="email">Email: </label>
+  <input id="email" type="text" formControlName="email">
+    <span *ngIf="!Email.valid && Email.touched">Email must be in proper '@' format</span>
+  <br>
+  <button>Submit</button>
+</form>
