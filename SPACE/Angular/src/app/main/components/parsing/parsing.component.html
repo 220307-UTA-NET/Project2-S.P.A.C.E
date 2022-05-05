@@ -1,1 +1,33 @@
-<p>parsing works!</p>
+<h2>The Parse() Method</h2>
+<p>We use the Parse() method to convert a string representation of a number to its numerical value. It returns the converted numerical value if the conversion is successful. The Parse() method throws an exception if the conversion fails. The exception can be:</p>
+<uL>
+    <li>an ArgumentNullException, if the input string is null</li>
+    <li>a FormatException, if the input string is of incorrect format</li>
+    <li>an OverFlowException, if the converted number exceeds the minimum or maximum range of the specified numeric type</li>
+</uL>
+
+<h5>Parse() Method OverloadList</h5>
+<ul>
+    <li>Parse (String)</li>
+    <li>Parse (String, IFormatProvider)</li>
+    <li>Parse (String, NumberStyles)</li>
+    <li>Parse (String, NumberStyles, IFormatProvider)</li>
+    <li>Parse (ReadOnlySpan char, NumberStyles, IFormatProvider)</li>
+</ul>
+
+<h2>The TryParse() Method</h2>
+<p>TryParse allows you to try and parse a string into a specified type.
+
+    It returns a boolean value indicating whether the conversion was successful or not.
+    
+    If conversion succeeded, the method will return true and the converted value will be assigned to the output parameter.
+    
+    If conversion failed, the return value will be false and the output parameter will not change value (default value).</p>
+
+    <h5>TryParse Method Overload List</h5>
+    <ul>
+        <li>TryParse(String, Int32)</li>
+        <li>TryParse(String, NumberStyles, IFormatProvider, Int32)</li>
+        <li>TryParse(ReadOnlySpan Char, Int32)</li>
+        <li>TryParse(ReadOnlySpan Char, NumberStyles, IFormatProvider, Int32</li>
+    </ul>
