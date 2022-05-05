@@ -25,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './user/register/register.component';
 import { Routes } from '@angular/router';
 import { LoginComponent } from './user/login/login.component';
-
+import { HttpClientModule } from '@angular/common/http';  // Need to import HttpClient from here
+import { AccountmanagerComponent } from './accountmanager/accountmanager.component'
 
 const routes: Routes = [
   {path: '', component: IntroductionComponent},
@@ -46,6 +47,7 @@ const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'login'},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'accountmanager', component: AccountmanagerComponent}
 ];
 
 @NgModule({
@@ -70,12 +72,15 @@ const routes: Routes = [
     ChallengescsComponent,
     SummaryCSComponent,
     RegisterComponent,
+    LoginComponent,
+    AccountmanagerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

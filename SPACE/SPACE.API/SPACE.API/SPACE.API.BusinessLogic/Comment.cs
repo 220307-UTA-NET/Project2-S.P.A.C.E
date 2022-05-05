@@ -10,7 +10,6 @@ namespace SPACE.API.SPACE.API.BusinessLogic
         public int CommentId { get; set; }
         public string Content { get; set; }
 
-        [ForeignKey("UserId")]
         public int UserId { get; set; }
     }
 }

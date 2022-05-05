@@ -26,10 +26,19 @@ namespace SPACE.API.Controllers
             return await _dataContext.Users.ToListAsync();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<List<User>>> GetUser(int id)
         {
             var user = await _dataContext.Users.FindAsync(id);
+            if (user == null)
+                return BadRequest("User not found.");
+            return Ok(user);
+        }
+
+        [HttpGet("{username}")]
+        public async Task<ActionResult<List<User>>> GetUser(string username)
+        {
+            var user = await _dataContext.Users.Where(user => user.Username == username).ToListAsync();
             if (user == null)
                 return BadRequest("User not found.");
             return Ok(user);

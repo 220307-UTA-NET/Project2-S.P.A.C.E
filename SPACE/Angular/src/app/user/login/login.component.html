@@ -1,10 +1,10 @@
 <p>User Login</p>
-<form>
+<form #form="ngForm" (ngSubmit)="login(user.username, user.password)">
   <label>Username: </label>
-  <input type="text">
+  <input type="text" name="username" [(ngModel)]="user.username">
   <br>
   <label>Password: </label>
-  <input type="password">
+  <input type="password" name="password" [(ngModel)]="user.password">
   <br>
-  <button>Submit</button>
+  <button>Login</button>
 </form>
