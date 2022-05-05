@@ -1,0 +1,19 @@
+p
+{
+  font-size: 30pt;
+  text-align: center;
+}
+
+form label
+{
+  display: block;
+}
+
+form span{
+  display: block;
+}
+
+span
+{
+  color: red;
+}

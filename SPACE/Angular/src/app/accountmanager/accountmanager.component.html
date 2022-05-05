@@ -1,0 +1,35 @@
+<p>Edit Account Information</p>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit2()">
+  <label for="userName">Username: </label>
+  <input id="userName" type="text" formControlName="userName" [(ngModel)]='user.username'>
+  <span *ngIf="!userName.valid && userName.touched">Username must include at least 5 characters</span>
+  <br>
+  <label for="password">Password: </label>
+  <input id="password" type="password" formControlName="password" [(ngModel)]='user.password'>
+  <span *ngIf="!password.valid && password.touched">
+    <span *ngIf="password.errors">
+      Password must be at least 5 characters
+    </span>
+  </span>
+  <br>
+  <label for="email">Email: </label>
+  <input id="email" type="text" formControlName="email" [(ngModel)]='user.email'>
+    <span *ngIf="!Email.valid && Email.touched">Email must be in proper '@' format</span>
+  <br>
+  <button>Update</button>
+</form>
+
+<div class="account-info">
+  <div class="user-row" *ngFor="let user of users">
+    <div (click)="populateForm(user)" class="user-detail">
+      <p>User Id: {{ user.userId }}</p>
+      <p>Username: {{ user.username }}</p>
+      <p>Password: {{ user.password }}</p>
+      <p>Email: {{ user.email }}</p>
+    </div>
+    <div class="user-detail-action">
+      <a (click)="deleteUser(user.userId)"><i class="fa-solid fa-trash-can"></i></a>
+    </div>
+    <br>
+  </div>
+</div>
