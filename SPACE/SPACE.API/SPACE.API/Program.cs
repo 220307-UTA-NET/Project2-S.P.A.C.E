@@ -11,7 +11,7 @@ builder.Services.AddSwaggerGen();
 
 // Inject DataContext
 builder.Services.AddDbContext<DataContext>(options =>
-    options.UseSqlServer(builder.Configuration["ConnectionStrings"]));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionStrings")));
 
 // AddCors will allow any client to talk to the API
 builder.Services.AddCors((setup) =>
