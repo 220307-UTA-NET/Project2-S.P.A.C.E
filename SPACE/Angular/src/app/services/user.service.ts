@@ -8,7 +8,7 @@ import { User } from '../user/model/user.model';
 })
 export class UserService {
 
-  baseUrl = 'https://spacetutorial.azurewebsites.net/api/User'
+  baseUrl = 'https://localhost:7242//api/User'
   constructor(private http: HttpClient) { }
 
     // Get all users
