@@ -24,7 +24,7 @@ nav li a
 
 nav li a:hover
 {
-    text-decoration: underline;    
+    text-decoration: underline;
 }
 
 .entry
@@ -47,10 +47,16 @@ nav li a:hover
 .set
 {
     /*margin-top: 10px;*/
-    
+
 }
 
 h4
 {
    /* margin: 0;*/
+}
+
+.intermediate li
+{
+  margin-left: -25px;
+  margin-bottom: 10px;
 }
