@@ -43,7 +43,7 @@ To-do list:
 
 ## Contributors
 
-*Austin, Aure, Jay, Andrew
+*Austin, Aure, Jay, Andrew, Tuan
 
 ## License
 
