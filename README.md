@@ -1,29 +1,33 @@
-                        Steady Paced Assembled Coding Experience – S.P.A.C.E.
-                                    Project Proposal
+# Project 2: S.P.A.C.E.
 
-We want to set up an application where users can log in and learn about programming languages starting with programming fundamentals and C#. Users who are interested in learning a new language can use this application to learn the fundamentals and work their way up to a more advanced understanding of the selected language. Users are presented a challenge to understand the language and get heavy emphasis on each function, method, etc. that is included in the language. Users can track their progress by their logins and resume where they left off. By keeping track of their progress, users can show or indicate their level of understanding to other people.
+## Project Description
+S.P.A.C.E. allows users to learn about different OOP programming languages including C# or Java. Users can interact with the deployed Angular SPA to select different concepts of a language along with various code examples, and complete challenges in the built-in sandbox environment. By accessing the different sections the user can learn more about various OOP languages at their own pace and selection of difficulty level. Users can also keep track of their progress, change personal information inside their account management portal, and view personal comments on the various programming topics. Relevent data is stored in an SQLServer database, and accessed by an ASP.NET restfull API hosted on Azue using Entity Framework.
 
 
-1.	User is looking to learn or expand their knowledge of a new programming language.
-2.	(Core) User can see the breakdown of coding logic resources.
-3.	(Core) User can update their username, password, and email. (Stretch) User can track their progress
-4.	(Core) User can pursue their chosen language or (Stretch) resume a previous session.
-5.	(Core) User can select their level of difficulty with a language.
-6.	(Core) User is presented with a table of contents of all the different chapters of topics and is initially started on chapter 1 (left side – TOC; right side - Chapter).
-7.	(Core) User is presented with the introduction of the topic contents.
-8.	(Core) User is a given a walkthrough of each topic with code examples.
-9.	(Core) User is given a coding sandbox. (Stretch) Integrate a coding challenge with 3rd party APIs.
-10.	(Core) User is presented an encompassing summary of the material with practical application examples
-11.	(Stretch) User has the option of adding comments about their chapter experience.
-12.	(Stretch) User has the option of exploring additional topics.
+## Technologies Used
+* C#
+* Azure Web App
+* Azure API Services
+* Sonarcloud analysis
+* REST API
+* JavaScript
+* SQL Database
+* GitHub CI/CD Action Pipeline
 
-                User Table
-USER_ID	UserName	Password	Email	Progress	COMMENT_ID
+## Features
+* Angular GUI
+* Entity Framework Back-End
 
-        Comment Table
-COMMENT_ID	COMMENT_DESCRIP
 
-        Challenge Table
-CHALLENGE_ID	CHALLENGE_DESCRIP
+To-do list:
+* Finish hooking up front end features to the backend
+* Add additional topics
+* Fill out each section with much more detail and accuracy
+* Add specific unit test challenges
+* Extended exception handeling and logging
+* Refined Sonarcloud quality
+* Integrate 3rd party NASA API
+* Secure authentication
 
-Members/Authors: Andrew, Aure, Austin, Jay
+## Contributors
+*Austin, Aure, Jay, Andrew
