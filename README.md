@@ -29,5 +29,22 @@ To-do list:
 * Integrate 3rd party NASA API
 * Secure authentication
 
+## Getting Started
+# Dependencies
+
+* Install Node.js (https://nodejs.org/en/)
+
+# Usage
+
+- git clone https://github.com/220307-UTA-NET/Project2-S.P.A.C.E.git
+- cd ./SPACE/Angular
+- npm install
+- ng serve -o
+
 ## Contributors
+
 *Austin, Aure, Jay, Andrew
+
+## License
+
+This project uses the following license: https://mit-license.org/
